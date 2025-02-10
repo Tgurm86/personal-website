@@ -1,75 +1,189 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.6">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #939393; -webkit-text-stroke: #939393}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #6e0058; -webkit-text-stroke: #6e0058}
-    p.p3 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #91000f; -webkit-text-stroke: #91000f}
-    p.p4 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; -webkit-text-stroke: #000000}
-    p.p5 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; color: #114403; -webkit-text-stroke: #114403}
-    p.p6 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px Times; -webkit-text-stroke: #000000; min-height: 16.0px}
-    span.s1 {font-kerning: none}
-    span.s2 {font-kerning: none; color: #6e0058; -webkit-text-stroke: 0px #6e0058}
-    span.s3 {font-kerning: none; color: #483912; -webkit-text-stroke: 0px #483912}
-    span.s4 {font-kerning: none; color: #91000f; -webkit-text-stroke: 0px #91000f}
-    span.s5 {font-kerning: none; -webkit-text-stroke: 0px #000000}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tolera Gurmu - Personal Website</title>
+  <!-- Link to external stylesheet if you have one -->
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Basic Page Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #333;
+    }
+    header, section, footer {
+      padding: 20px;
+      margin: 20px;
+    }
+    header {
+      background: #f4f4f4;
+      text-align: center;
+    }
+    h1, h2 {
+      margin: 0 0 10px 0;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Portfolio Gallery & Lightbox Styles */
+    .gallery-img {
+      max-width: 300px;
+      width: 100%;
+      cursor: pointer;
+      transition: 0.3s;
+      display: block;
+      margin: 20px auto;
+    }
+    .gallery-img:hover {
+      opacity: 0.8;
+    }
+    
+    /* The Modal (Lightbox) */
+    .modal {
+      display: none; /* Hidden by default */
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      animation: zoom 0.6s;
+    }
+    @keyframes zoom {
+      from { transform: scale(0); }
+      to { transform: scale(1); }
+    }
+    .close {
+      position: absolute;
+      top: 20px;
+      right: 35px;
+      color: #fff;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+    }
+    #caption {
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+    }
   </style>
 </head>
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE </span><span class="s2">html</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;html </span><span class="s3">lang</span><span class="s1">=</span><span class="s4">"en"</span><span class="s1">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;head&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;meta </span><span class="s3">charset</span><span class="s1">=</span><span class="s4">"UTF-8"</span><span class="s1">&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">&lt;meta </span><span class="s3">name</span><span class="s2">=</span><span class="s1">"viewport"</span><span class="s2"> </span><span class="s3">content</span><span class="s2">=</span><span class="s1">"width=device-width, initial-scale=1.0"</span><span class="s2">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">  </span></span><span class="s2">&lt;title&gt;</span><span class="s1">Tolera Gurmu - Personal Website</span><span class="s2">&lt;/title&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">&lt;link </span><span class="s3">rel</span><span class="s2">=</span><span class="s1">"stylesheet"</span><span class="s2"> </span><span class="s3">href</span><span class="s2">=</span><span class="s1">"styles.css"</span><span class="s2">&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p2"><span class="s1">&lt;body&gt;</span></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Header Section --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;header&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;h1&gt;</span><span class="s1">Tolera Gurmu</span><span class="s2">&lt;/h1&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;p&gt;</span><span class="s1">Developer | Designer | Innovator</span><span class="s2">&lt;/p&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/header&gt;</span></p>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- About Section --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;section </span><span class="s3">id</span><span class="s1">=</span><span class="s4">"about"</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;h2&gt;</span><span class="s1">About Me</span><span class="s2">&lt;/h2&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;p&gt;</span><span class="s1">Hello! I’m Tolera Gurmu, a passionate developer and problem-solver. I enjoy creating innovative solutions and building beautiful, functional websites.</span><span class="s2">&lt;/p&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/section&gt;</span></p>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Skills Section --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;section </span><span class="s3">id</span><span class="s1">=</span><span class="s4">"skills"</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;h2&gt;</span><span class="s1">My Skills</span><span class="s2">&lt;/h2&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;ul&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s2">&lt;li&gt;</span><span class="s1">HTML &amp; CSS</span><span class="s2">&lt;/li&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s2">&lt;li&gt;</span><span class="s1">JavaScript</span><span class="s2">&lt;/li&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s2">&lt;li&gt;</span><span class="s1">Python</span><span class="s2">&lt;/li&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">      </span></span><span class="s2">&lt;li&gt;</span><span class="s1">Project Management</span><span class="s2">&lt;/li&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">    </span></span><span class="s1">&lt;/ul&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/section&gt;</span></p>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Portfolio Section --&gt;</span></p>
-<p class="p3"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s2">&lt;section </span><span class="s3">id</span><span class="s2">=</span><span class="s1">"portfolio"</span><span class="s2">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;h2&gt;</span><span class="s1">Portfolio</span><span class="s2">&lt;/h2&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;p&gt;</span><span class="s1">Coming Soon! Stay tuned for some exciting projects.</span><span class="s2">&lt;/p&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/section&gt;</span></p>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Contact Section --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;section </span><span class="s3">id</span><span class="s1">=</span><span class="s4">"contact"</span><span class="s1">&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;h2&gt;</span><span class="s1">Contact Me</span><span class="s2">&lt;/h2&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;p&gt;</span><span class="s1">Email: </span><span class="s2">&lt;a </span><span class="s3">href</span><span class="s2">=</span><span class="s4">"mailto:tol.gurmu2020@gmail.com"</span><span class="s2">&gt;</span><span class="s1">tol.gurmu2020@gmail.com</span><span class="s2">&lt;/a&gt;&lt;/p&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/section&gt;</span></p>
-<p class="p6"><span class="s1"></span><br></p>
-<p class="p5"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;!-- Footer --&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;footer&gt;</span></p>
-<p class="p4"><span class="s1"><span class="Apple-converted-space">    </span></span><span class="s2">&lt;p&gt;</span><span class="s1">© 2024 Tolera Gurmu. All Rights Reserved.</span><span class="s2">&lt;/p&gt;</span></p>
-<p class="p2"><span class="s5"><span class="Apple-converted-space">  </span></span><span class="s1">&lt;/footer&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p2"><span class="s1">&lt;/html&gt;</span></p>
+  <!-- Header Section -->
+  <header>
+    <h1>Tolera Gurmu</h1>
+    <p>Developer | Designer | Innovator</p>
+  </header>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hello! I’m Tolera Gurmu, a passionate developer and problem-solver.
+      I enjoy creating innovative solutions and building beautiful, functional websites.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>My Skills</h2>
+    <ul>
+      <li>HTML &amp; CSS</li>
+      <li>JavaScript</li>
+      <li>Python</li>
+      <li>Project Management</li>
+    </ul>
+  </section>
+
+  <!-- Portfolio Section with Lightbox -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Click on the image to view it in a lightbox:</p>
+    <!-- Image thumbnail using relative path -->
+    <img
+      id="img1"
+      class="gallery-img"
+      src="images/IMG_0015.JPG"
+      alt="Sample Project"
+    />
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div id="lightboxModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="modalImage" />
+    <div id="caption"></div>
+  </div>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>
+      Email:
+      <a href="mailto:tol.gurmu2020@gmail.com">tol.gurmu2020@gmail.com</a>
+    </p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Tolera Gurmu. All Rights Reserved.</p>
+  </footer>
+
+  <!-- JavaScript for Lightbox Functionality -->
+  <script>
+    // Get the modal element
+    const modal = document.getElementById("lightboxModal");
+    // Get the image and modal image elements
+    const img = document.getElementById("img1");
+    const modalImg = document.getElementById("modalImage");
+    const captionText = document.getElementById("caption");
+
+    // When the user clicks on the image, open the modal and display the image
+    img.addEventListener("click", function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.textContent = this.alt;
+    });
+
+    // Get the <span> element that closes the modal
+    const closeBtn = document.getElementsByClassName("close")[0];
+    closeBtn.addEventListener("click", function () {
+      modal.style.display = "none";
+    });
+
+    // Optional: Close the modal when clicking anywhere outside the image
+    modal.addEventListener("click", function (event) {
+      if (event.target === modal) {
+        modal.style.display = "none";
+      }
+    });
+  </script>
 </body>
 </html>
